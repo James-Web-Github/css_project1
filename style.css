@@ -1,0 +1,61 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* 簡單來說，align-items 用於單行的 Flex 容器，控制所有 Flex 元素的對齊方式，而 align-content 用於多行的 Flex 容器，控制多行 Flex 元素之間的對齊方式。如果只有一行 Flex 元素，通常只使用 align-items 就足夠。 */
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 上下左右 */
+    padding: 20px 10%;
+
+    
+}
+
+.navmenu {
+    display: flex;
+}
+
+.navmenu a{
+    color: #2c2c2c;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    /* 經典配位 */
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+}
+.navmenu a:hover {
+    color: aqua;
+}
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: all 0.5s ease;
+
+}
+/* transform: scale(1, 1); 是 CSS transform 属性的一种设置，用于缩放元素。具体来说，这个设置表示在水平和垂直方向上都应用了 1 倍的缩放，即不进行缩放。 */
+.nav-icon i:hover {
+    transform: scale(1,1);
+    color: aqua;
+}
