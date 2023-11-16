@@ -47,6 +47,7 @@ header{
 }
 
 .nav-icon i {
+    margin-top: 5px;
     margin-right: 20px;
     color: #2c2c2c;
     font-size: 1.5rem;
@@ -58,4 +59,234 @@ header{
 .nav-icon i:hover {
     transform: scale(1,1);
     color: aqua;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: #2c2c2c;
+    z-index: 10001;
+    cursor: pointer;
+}
+
+section{
+    padding: 5% 10%;
+    position: relative;
+}
+
+.main-home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/banner-3.png);
+    background-position: center;
+    background-color: cover;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+}
+
+.main-text h5 {
+    color:  #EE1C47;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.main-text h1 {
+    color: #000;
+    font-size: 64px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 6px 0 50px;
+    white-space: nowrap;
+  text-overflow: initial;
+}
+
+.main-text p {
+    color: #333c56;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+/* inline元素的确会忽略上下边距（margin），它们会紧密相邻，不会在垂直方向上留出空白。这是因为inline元素被视为内联元素，类似于文本，它们在同一行内显示，并且不会独占一行的空间。 
+ 如果你想要上下边距生效，你可以考虑使用display: inline-block;或者display: inline-flex;。这样可以使元素保持inline的特性，同时允许上下边距的应用。 */
+.main-btn{
+    display: inline-block;
+    color: #111;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+}
+
+.main-btn:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 1s ease;
+}
+.main-btn i {
+    /* 它可以指定元素相对于其父元素或基线的垂直对齐方式。須配合display:inline-block or inline */
+    vertical-align: middle;
+}
+
+.down-arrow {
+    position: absolute;
+    /* 趴數是包含padding的 */
+    top: 85%;
+    right: 11%;
+}
+
+.down i {
+    font-size: 30px;
+    color: #000;
+    border: 2px solid #222;
+    border-radius: 50px;
+    padding: 12px;
+}
+
+.down i:hover {
+    background-color: #000;
+    color: whitesmoke;
+}
+
+header.sticky {
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+/* trending-section-css */
+
+.center-text h2 {
+    color: #111;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.center-text span {
+    color: #EE1C47;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,auto));
+    gap: 2rem;
+}
+
+.row{
+    position: relative;
+    transition: all .40s;
+}
+.row img {
+    width: 100%;
+    height: auto;
+    transition: all .8s;
+}
+
+.row img:hover {
+    transform: scale(0.9,0.9);
+}
+
+.product-text h5 {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding: 3px 8px;
+    border-radius: 2px;
+}
+
+.heart-icon {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+.heart-icon:hover {
+    transform: scale(1.1);
+    color:#EE1C47;
+}
+
+.ratting i{
+    color: #FF8C00;
+}
+.price h4 {
+    color: #111;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.price p{
+    color: #151515;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.client-reviews {
+    background-color: #F3F4F6;
+}
+
+.reviews {
+    text-align: center;
+}
+
+.reviews h3 {
+    color: #111;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    /* text-align: center; */
+    font-weight: 700;
+}
+
+.reviews img{
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+    margin: 10px 0;
+}
+
+.reviews p {
+    color: #707070;
+    width:50%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.reviews h2 {
+    font-size: 22px;
+    color: #000;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+/* update-section-css */
+.up-center-text h2 {
+    text-align: center;
+    color: #111;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.cart img {
+    width: 380px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.update-cart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(380px,auto));
 }
