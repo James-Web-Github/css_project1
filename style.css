@@ -56,9 +56,37 @@ header.sticky{
 .navmenu a:hover {
     color: aqua;
 }
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    80% {
+        opacity: .5;
+    }
+}
+
+.blink{
+    animation: blink 3s linear infinite;
+}
+
 .nav-icon {
     display: flex;
     align-items: center;
+}
+.cart-add{
+    position: relative;
+}
+.cart-ammount{
+    text-align: center;
+    position: absolute;
+    border-radius: 700px;
+    color: #edfff1;
+    top: 0;
+    left: 14px;
+    padding: 5px;
+    font-size: 12px;
+    background-color: red;
 }
 
 .nav-icon i {
@@ -236,6 +264,7 @@ header.sticky {
     color: #FF8C00;
 }
 .price h4 {
+    display: inline;
     color: #111;
     font-size: 1rem;
     text-transform: capitalize;
@@ -246,6 +275,26 @@ header.sticky {
     color: #151515;
     font-size: 14px;
     font-weight: 600;
+}
+
+.price .add_to_cart{
+    border-radius: 50px;
+    background-color: #EE1C47;
+    color: whitesmoke;
+    position: absolute;
+    padding: 5px;
+    bottom: 0%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+}
+.price .add_to_cart i{
+    font-size: 30px;
+}
+.price .add_to_cart:hover{
+    transform: scale(1.1);
+    transition: all .42s;
+    cursor: pointer;
 }
 
 .client-reviews {
