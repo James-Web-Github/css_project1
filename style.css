@@ -9,8 +9,11 @@
     text-decoration: none;
 }
 
+
+
 /* 簡單來說，align-items 用於單行的 Flex 容器，控制所有 Flex 元素的對齊方式，而 align-content 用於多行的 Flex 容器，控制多行 Flex 元素之間的對齊方式。如果只有一行 Flex 元素，通常只使用 align-items 就足夠。 */
 header{
+    background-color: whitesmoke;
     position: fixed;
     width: 100%;
     top: 0;
@@ -23,6 +26,18 @@ header{
     padding: 20px 10%;
 
     
+}
+
+header.sticky{
+    background-color:  whitesmoke;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
 }
 
 .navmenu {
@@ -66,6 +81,7 @@ header{
     color: #2c2c2c;
     z-index: 10001;
     cursor: pointer;
+    display: none;
 }
 
 section{
@@ -79,6 +95,7 @@ section{
     background-image: url(image/banner-3.png);
     background-position: center;
     background-color: cover;
+    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
@@ -136,7 +153,10 @@ section{
     top: 85%;
     right: 11%;
 }
-
+.down a {
+    scroll-behavior: smooth;
+    transition: all .5s;
+}
 .down i {
     font-size: 30px;
     color: #000;
@@ -280,13 +300,164 @@ header.sticky {
     margin-bottom: 30px;
 }
 
-.cart img {
-    width: 380px;
+.cart h5,
+.cart img,
+.cart h4,
+.cart p,
+.cart h6{
+    /* width: 380px; */
+    width: 100%;
+    padding: 0 10%;
     height: auto;
     border-radius: 5px;
 }
 
 .update-cart {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(380px,auto));
+    grid-template-columns: repeat(auto-fit,minmax(360px,auto));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.cart h5 {
+    color: #636872;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.cart h4 {
+    color: #111;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cart p {
+    color:#707070;
+    font-size: 15px;
+    max-width: 380px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+
+.cart h6 {
+    color: #151515;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact {
+    background-color: #F3F4F6;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,auto));
+    gap: 3rem;
+}
+
+.first-info img{
+    width: 140px;
+    height: auto;
+}
+
+
+.contact-info h4 {
+    color: #212529;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #565656;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+}
+
+.contact-info p:hover {
+    color: aqua;
+}
+
+.social-icon i{
+    color: #565656;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .5s;
+}
+
+.social-icon i:hover {
+    transform: scale(1.5);
+}
+
+.end-text {
+    background-color: #edfff1;
+    text-align: center;
+    padding: 20px;
+
+}
+.end-text p{
+    color: #111;
+    text-transform: capitalize;
+}
+
+/* Response-css */
+
+@media (max-width:890px){
+    header{
+        padding: 20px 10%;
+        transition: .4s;
+    }
+
+@media (max-width:630px){
+    .main-text h1 {
+        font-size: 50px;
+        transition: .4s;
+    }
+    .main-text p {
+        font-size: 18px;
+        transition: .4s;
+    }
+    .main-text btn {
+        padding: 10px 20px;
+        transition: .4s;
+    }
+}
+
+@media(max-width:750px){
+    
+
+    .navmenu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 130vh;
+        background-color: wheat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 102px 30px;
+        transition: all 0.5s;
+    }
+    .navmenu a{
+        display: inline-block;
+        /* margin-bottom: 30px; */
+        margin: 18px 0;
+    }
+
+    .navmenu.open{
+        right: 0;
+    }
+
+    
+    #menu-icon{
+        display: inline;
+    }
+}
 }
